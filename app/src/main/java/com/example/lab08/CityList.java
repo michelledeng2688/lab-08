@@ -20,4 +20,7 @@ public class CityList {
         return list;
     }
 
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
 }
