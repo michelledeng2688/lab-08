@@ -30,4 +30,8 @@ public class CityList {
         }
         cities.remove(city);
     }
+
+    public int countCities() {
+        return cities.size();
+    }
 }
