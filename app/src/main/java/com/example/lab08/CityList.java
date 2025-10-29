@@ -7,7 +7,7 @@ import java.util.List;
 public class CityList {
     private List<City> cities = new ArrayList<>();
 
-    public void add(City city) {
+    public void addCity(City city) {
         if (cities.contains(city)) {
             throw new IllegalArgumentException();
         }
@@ -20,18 +20,4 @@ public class CityList {
         return list;
     }
 
-    public boolean hasCity(City city) {
-        return cities.contains(city);
-    }
-
-    public void deleteCity(City city) {
-        if (!cities.contains(city)) {
-            throw new IllegalArgumentException("City not found in the list");
-        }
-        cities.remove(city);
-    }
-
-    public int countCities() {
-        return cities.size();
-    }
 }
