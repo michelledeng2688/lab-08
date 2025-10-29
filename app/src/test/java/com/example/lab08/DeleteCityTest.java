@@ -13,4 +13,13 @@ public class DeleteCityTest {
         cityList.deleteCity(city);
         assertFalse(cityList.hasCity(city));
     }
+
+    @Test
+    void testDeleteNonexistentCityThrowsException() {
+        CityList cityList = new CityList();
+        City city = new City("Vancouver", "BC");
+        assertThrows(IllegalArgumentException.class, () -> {
+            cityList.deleteCity(city);
+        });
+    }
 }
